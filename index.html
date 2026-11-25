@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name – Engineering Portfolio</title>
+  <meta name="description" content="Portfolio of an engineering student building machine learning and systems projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    /* Set theme before paint to avoid a flash */
+    try {
+      var saved = localStorage.getItem("theme");
+      if (saved) { document.documentElement.setAttribute("data-theme", saved); }
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="#top">Your Name</a>
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Dark mode">
+        <span class="theme-toggle__track" aria-hidden="true"><span class="theme-toggle__thumb"></span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <section id="top" class="hero" aria-labelledby="hero-title">
+      <div class="hero__text">
+        <p class="hero__role">Engineering student · ML and systems</p>
+        <h1 id="hero-title">I build things that learn, and the systems that keep them running.</h1>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#projects">See my projects</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <figure class="hero__figure">
+        <img src="https://placehold.co/600x600/png?text=Your+Photo" alt="Portrait of Your Name" width="600" height="600">
+        <figcaption>Replace with your photo</figcaption>
+      </figure>
+    </section>
+
+    <section id="about" class="about" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <div class="about__body">
+        <p>I'm a first-year engineering student who enjoys turning a vague problem into a working prototype. I split my time between machine learning, systems programming and algorithm practice.</p>
+        <p>I work best in small teams where everyone ships something. Outside class I take part in hackathons and coding contests.</p>
+      </div>
+      <dl class="facts">
+        <div class="facts__item"><dt>Studying</dt><dd>B.E. Engineering</dd></div>
+        <div class="facts__item"><dt>Focus</dt><dd>ML, systems, algorithms</dd></div>
+        <div class="facts__item"><dt>Based in</dt><dd>Your city</dd></div>
+      </dl>
+    </section>
+
+    <section id="projects" class="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+      <ul class="cards">
+        <li class="card card--feature">
+          <article>
+            <h3>Project one</h3>
+            <p>One sentence on the problem, one on what you built, one on the result.</p>
+            <ul class="tags" aria-label="Technologies"><li>Python</li><li>PyTorch</li></ul>
+            <a class="card__link" href="#">View project</a>
+          </article>
+        </li>
+        <li class="card">
+          <article>
+            <h3>Project two</h3>
+            <p>A short description of what it does and why it matters.</p>
+            <ul class="tags" aria-label="Technologies"><li>Java</li><li>Data structures</li></ul>
+            <a class="card__link" href="#">View project</a>
+          </article>
+        </li>
+        <li class="card">
+          <article>
+            <h3>Project three</h3>
+            <p>A short description of what it does and why it matters.</p>
+            <ul class="tags" aria-label="Technologies"><li>C</li><li>Linux</li></ul>
+            <a class="card__link" href="#">View project</a>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section id="skills" class="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+      <div class="skills__groups">
+        <div class="skill-group">
+          <h3>Machine learning</h3>
+          <ul class="chips"><li>Python</li><li>scikit-learn</li><li>PyTorch</li><li>Pandas</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Systems</h3>
+          <ul class="chips"><li>C</li><li>Linux</li><li>Git</li><li>Networking</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Algorithms</h3>
+          <ul class="chips"><li>Java</li><li>Data structures</li><li>Problem solving</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p class="contact__intro">Have a project, an internship or a team that needs another builder? Send a note.</p>
+      <form class="form" action="#" method="post">
+        <div class="form__field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="form__field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="form__field form__field--wide">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button class="btn btn--primary" type="submit">Send message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Your Name</p>
+    <ul class="social">
+      <li><a href="#">GitHub</a></li>
+      <li><a href="#">LinkedIn</a></li>
+      <li><a href="mailto:you@example.com">Email</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var btn = document.querySelector(".theme-toggle");
+      function isDark() {
+        var t = root.getAttribute("data-theme");
+        if (t) { return t === "dark"; }
+        return window.matchMedia("(prefers-color-scheme: dark)").matches;
+      }
+      function sync() { btn.setAttribute("aria-pressed", String(isDark())); }
+      btn.addEventListener("click", function () {
+        var next = isDark() ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem("theme", next); } catch (e) {}
+        sync();
+      });
+      sync();
+    })();
+  </script>
+</body>
+</html>
